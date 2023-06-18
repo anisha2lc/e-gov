@@ -1,0 +1,533 @@
+.modal-overlay {
+    height: 100%;
+    inset: 0;
+    z-index: 50;
+}
+
+.modal-content {
+    height: 100%;
+    top: 0;
+    width: 100vw;
+
+    @supports not (backdrop-filter: blur(0.625em)) {
+        background-color: rgba($white, 0.9);
+    }
+
+    @supports (backdrop-filter: blur(0.625em)) {
+        backdrop-filter: blur(0.625em);
+        background: $light-grey-overlay;
+    }
+}
+
+.custom-download-modal {
+    box-shadow: $mid-dark-gray 0 0.4375em 1.8125em 0;
+    height: 20em;
+    left: 29.116%;
+    top: 26.41%;
+    width: 32em;
+    z-index: 50;
+}
+
+.congratulation {
+    color: $sage-green;
+}
+
+.homepage-return {
+    background-color: $white;
+    border: $primary solid;
+    color: $primary;
+    width: 14em;
+}
+
+.overlay {
+    height: 100%;
+    inset: 0;
+    z-index: 50;
+}
+
+.inside-modal {
+    height: 100%;
+    top: 0;
+    width: 100vw;
+
+    @supports not (backdrop-filter: blur(0.625em)) {
+        background-color: rgba($white, 0.9);
+    }
+
+    @supports (backdrop-filter: blur(0.625em)) {
+        backdrop-filter: blur(0.625em);
+        background: $light-grey-overlay;
+    }
+}
+
+.no-template {
+    color: $primary;
+}
+
+.instruction-wrapper {
+    background-color: $light-grey-instruction;
+    color: $primary-black;
+}
+
+.upload-instruction-topic {
+    font-size: $h6-font-size;
+}
+
+
+.modal-list-numbering {
+    font-size: $xs-font-size;
+}
+
+.modal-instruction {
+    font-size: $h6-font-size;
+}
+
+.modal-image {
+    height: 5.5em;
+    width: 5.5em;
+}
+
+
+.custom-modal {
+    box-shadow: $mid-dark-gray 0 0.4375em 1.8125em 0;
+    left: 29.116%;
+    top: 26.41%;
+    width: 36em;
+    z-index: 50;
+}
+
+.upload-instruction {
+    color: $blurry-black;
+}
+
+.close {
+    cursor: pointer;
+    left: 33.5em;
+    top: 1em;
+}
+
+
+.modal-instruction-list {
+    font-size: $h6-font-size;
+}
+
+.modal-instruction-number {
+    @include size(1.5em);
+    background-color: #99a7a5;
+    color: $white;
+    font-size: $xs-font-size;
+    font-weight: $point-font-weight;
+}
+
+.modal-instruction-number-first {
+    @include size(1.5em, 1.75em);
+    background-color: #99a7a5;
+    color: $white;
+    font-size: $xs-font-size;
+    font-weight: $point-font-weight;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.limitations {
+    color: $primary;
+    font-size: $h6-font-size;
+}
+
+@keyframes dot-keyframes {
+    0% {
+
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+
+        opacity: 0.4;
+        transform: scale(1);
+    }
+}
+
+.moving-loading-dots {
+    .dot {
+        @include size(0.6em);
+        animation: dot-keyframes 1.5s infinite ease-in-out;
+        background-color: $white;
+        border-radius: 0.625em;
+
+        &:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 1s;
+        }
+    }
+}
+
+.switch {
+    height: 1.3em;
+    width: 2.5em;
+}
+
+.switch input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+}
+
+.slider {
+    background-color: $white;
+    border: solid $primary;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    @include size(0.9em);
+    background-color: $danger;
+    bottom: 0.07em;
+    content: '';
+    left: 0.0525em;
+    position: absolute;
+    transition: 0.4s;
+}
+
+
+.instruction-condition {
+    color: $primary-black;
+    font-size: $h6-font-size;
+    padding-left: 1em;
+}
+
+
+input:checked+.slider {
+    background-color: $dark-red;
+    border: solid $primary;
+}
+
+input+.slider {
+    box-shadow: 0 0 0 0.25em rgba($primary, 0.7);
+}
+
+input:checked+.slider::before {
+    background-color: $white;
+    transform: translateX(1.2em);
+}
+
+.slider.round {
+    border-radius: 2.125em;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+.validation-error {
+    color: $primary;
+}
+
+.input-field {
+    color: $dark-grey-text;
+}
+
+input:focus {
+    border: 0.0625em solid $light-blue;
+    box-shadow: 0 0 0 0.25em $light-blue-shadow;
+}
+
+.iframe {
+    height: 30em;
+    width: 90%;
+}
+
+
+.download-button {
+    background-color: $primary;
+    color: $white;
+}
+
+.download-solid-icon {
+    @include size(1.5em);
+    margin: 0.5em;
+
+}
+
+.required {
+    color: $primary;
+}
+
+.invalid {
+    border: $primary solid;
+}
+
+.submit-button-wrap {
+    padding-right: 5em;
+}
+
+.header {
+    background-color: $white-branding-color;
+    width: 100%;
+    z-index: 50;
+}
+
+.scanning-file {
+    color: $gray-input-color;
+    padding: 0.5em;
+}
+
+.wrapper {
+    background-color: $white-background-color;
+    min-height: 100vh;
+}
+
+.app-header {
+    padding-inline: 4em;
+}
+
+.page-heading {
+    border-bottom: $red-border-gradient-color 0.06em solid;
+    border-image: linear-gradient(to right, $light-grey-color , $red-border-gradient-color, $light-grey-color) 1;
+    color: $gray-input-color;
+    line-height: $line-height-lg;
+    padding: 0.1em;
+    padding-inline: 0.5em;
+
+    span {
+        color: $primary;
+        padding: 0.1em;
+    }
+}
+
+.new-app-header {
+    color: $primary-black;
+}
+
+.truemark-logo {
+    padding-inline: 2.5em;
+}
+
+.list-group-item {
+    border: 0;
+    color: $primary-black;
+    font-weight: $point-font-weight;
+    padding-inline: 4.5em;
+}
+
+.instruction-lists {
+    padding-left: 4.25em;
+}
+
+.instruction-header {
+    color: $primary-black;
+    font-weight: $point-font-weight;
+    padding-left: 5em;
+}
+
+.upload-content {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23B9B9B9FF' stroke-width='6' stroke-dasharray='6%2c 14' stroke-dashoffset='9' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 0.5em;
+    border-width: 0.1875em;
+    height: 13.0625em;
+}
+
+.upload-section {
+    margin-top: 2em;
+    padding-bottom: 1.5em;
+    padding-inline: 4em;
+}
+
+.click-file {
+    color: $primary-black;
+    font-weight: $point-font-weight;
+}
+
+.drag-file {
+    color: $mid-gray-text;
+    font-weight: $point-font-weight;
+}
+
+.loading-wrap {
+    @include size(4.5em);
+    animation: spin 1s linear infinite;
+    background: linear-gradient(to right, $primary, $light-grey-color);
+    border-radius: 50%;
+    padding: 0.5em;
+
+    div {
+        background-color: $white;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.badge {
+    @include size(1.75em);
+    background-color: $primary;
+    font-weight: $point-font-weight;
+    padding: 0.4em;
+}
+
+.application-title {
+    background-color: rgba($primary, 0.2);
+}
+
+.page-navbar {
+    z-index: 999;
+}
+
+.btn {
+    background-color: $primary;
+    color: $white;
+}
+
+.download-button-wrap {
+    margin-inline: 5em;
+}
+
+.limitations-home {
+    color: $primary;
+    padding-left: 5em;
+}
+
+.table-instruction {
+    padding-left: 4em;
+
+}
+
+.nepal-image {
+    height: 6em;
+}
+
+.navlink{
+    text-decoration: none;
+}
+
+.form {
+    // background-color: #008CCB;
+    background-color: #ed898e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-main h1 {
+    text-align: center;
+    color: red;
+
+}
+
+.personalDetails {
+    margin-top: 15px;
+}
+
+.form-main label {
+    font-weight: 600;
+}
+
+.form-main {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 20px;
+    width: 30em;
+}
+
+.image {
+    height: 150px;
+    width: 200px;
+}
+
+.main-div {
+    height: 100vh;
+    width: 98.5vw;
+}
+
+.logo::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.logo {
+    margin: 8px;
+}
+
+.logo::before {
+    border: 0.07em solid #999;
+    border-radius: 3px;
+    color: gray;
+    content: "+ Add the logo";
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    height: 7em;
+    padding-left: 0.75em;
+    padding-top: 2.5em;
+    white-space: nowrap;
+    width: 12em;
+}
+
+.logo::after {
+    border: 0.07em solid #999;
+    border-radius: 3px;
+    color: gray;
+    content: "+ Add the logo";
+    cursor: pointer;
+    display: none;
+    font-size: 1em;
+    padding-left: 0.75em;
+    padding-top: 2.5em;
+    visibility: hidden;
+    white-space: nowrap;
+}
+
+
+.button {
+    background-color: #FF8E00;
+    border: none;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: floralwhite;
+}
+
+.form-main{
+    height: 35em;
+    overflow: auto;
+    margin-bottom: 2em;
+}
+
+.table {
+    margin-inline: auto;
+}
+
+.thead {
+    height: 2em;
+    background-color: $red;
+    color: aliceblue;
+}
+
+.table-data {
+    color: gray;
+    font-weight: 500;
+
+}

@@ -1,0 +1,47 @@
+//colors
+$primary-black: #333;
+$white-branding-color: #fafbfc;
+$blurry-black: rgba(51, 51, 51, 0.9);
+$success-color: #1db27e;
+$white: #fff;
+$red: #f04c55;
+$warning: #ffcd39;
+$information: #237fd2;
+$danger: #dc3545;
+$dark-red: #dd4a52;
+$mild-gray: #99a7a5;
+$gray-input-color: #808080;
+$mid-dark-gray: #535353;
+$white-background-color: #f4f5f9;
+$red-border-gradient-color: #f05a62;
+$light-grey-color: #f1f1f2;
+$light-grey-overlay: rgba(51, 51, 51, 0.5);
+$light-grey-instruction: rgba(153, 167, 165, 0.1);
+$dark-grey-text: rgba(51, 51, 51, 0.9);
+$light-blue-shadow: rgba(134, 183, 254, 0.25);
+$normal-yellow: #dca048;
+$light-pink: #fec1c1;
+$light-blue: #86b7fe;
+$mid-gray-text: #4f4f4f;
+$sage-green: #1db27e;
+
+//line height
+$line-height-base: 1.5 !default;
+$line-height-lg: 2.5 !default;
+
+//font-weight
+$point-font-weight: 500;
+
+//font-size
+$font-size-base: 1rem !default;
+$h1-font-size: $font-size-base * 2.25 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h4-font-size: $font-size-base * 1.125 !default;
+$h5-font-size: $font-size-base  !default;
+$h6-font-size: $font-size-base * 0.875 !default;
+$xs-font-size: $font-size-base * 0.625 !default;
+
+//font family
+$font-family-sans-serif: 'Inter', sans-serif;
+
+$primary: $red  !default;
