@@ -529,5 +529,16 @@ input:focus {
 .table-data {
     color: gray;
     font-weight: 500;
+}
 
+.form-fields-wrapper{
+    background-image: url("../../images/redbg.jpg");
+     background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.bi-eye-slash{
+    right: 1.5em;
+    bottom: 1.5em;
 }
