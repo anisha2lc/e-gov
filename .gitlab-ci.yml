@@ -1,0 +1,34 @@
+cache:
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  key:
+    files:
+      # Cache npm packages using lock file
+      - package-lock.json
+  paths:
+    - .npm/
+
+before_script:
+    - npm ci --cache .npm
+
+stages:
+  - lint
+  - test
+
+e2e_test:
+  image: cypress/browsers:node18.14.0-chrome
+  stage: test
+  script:
+    - npm run start:ci
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 day
+
