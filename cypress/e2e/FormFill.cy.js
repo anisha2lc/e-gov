@@ -10,14 +10,22 @@ describe("Contract Generate Flow", () => {
     cy.visit(Cypress.env("appUrl"));
   });
 
-  it("generates a contract after scanning the template file", () => {
+  it("successfully registers the birth details", () => {
     cy.get('[data-cy="Email Address"]').should("be.visible");
     cy.get('[data-cy="Password"]').should("be.visible");
+
+    cy.intercept("POST", "/api/login", (req) => {
+      // Intercept and modify login request
+      req.body.email = "example@email.com";
+      req.body.password = "examplePassword";
+    }).as("loginRequest");
 
     cy.get("form").within(() => {
       cy.get('input[name="Email Address"]').type("anihsa02@gmail.com");
       cy.get('input[name="Password"]').type("anisha02");
     });
+
+    cy.wait("@loginRequest");
 
     cy.get('[data-cy="form-submit"]').should("be.visible");
 
